@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  apache:
+    build: ./app
+    ports: 
+      - '9159:80'
+    volumes:
+      - ./html:/var/www/html/
