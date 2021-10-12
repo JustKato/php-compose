@@ -20,7 +20,9 @@ RUN apt-get update && \
 
 RUN docker-php-ext-install intl
 RUN docker-php-ext-install mysqli pdo pdo_mysql
-# RUN docker-php-ext-install mbstring
+RUN docker-php-ext-enable mysqli
+RUN docker-php-ext-enable pdo
+RUN docker-php-ext-enable pdo_mysql
 RUN docker-php-ext-configure gd --with-freetype
 RUN docker-php-ext-install gd
 
